@@ -1,0 +1,11 @@
+.market-index {
+  margin-top: 50px;
+}
+
+@media only screen and (min-width: 600px) {
+  .market-index {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

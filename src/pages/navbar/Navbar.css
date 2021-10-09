@@ -1,0 +1,29 @@
+.navbar-item {
+  text-shadow: 0 0 0.2em rgb(201, 119, 255);
+  padding: 10px;
+  height: 85px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  border-bottom: solid;
+  border-color: coral;
+}
+
+.navbar-logo {
+  color: #ff7300;
+  margin: 5px;
+  text-decoration: none;
+}
+
+.logo {
+  padding: 10px;
+}
+
+.menu-icon {
+  color: #ff7300;
+  padding: 5px 10px;
+  font-size: 17px;
+  text-decoration: none;
+  text-align: center;
+}

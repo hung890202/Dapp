@@ -1,0 +1,46 @@
+import React from "react";
+import { useWallet, UseWalletProvider } from "use-wallet";
+
+import "./Connect.css";
+
+const Connect = () => {
+  const wallet = useWallet();
+  const blockNumber = wallet.getBlockNumber();
+
+  return (
+    <>
+      <div className="connect-index">
+        <h1>
+          <span className="connect-index-title">Connect Wallet</span>
+        </h1>
+        {wallet.status === "connected" ? (
+          <div>
+            <div className="connect-index-text">
+              <div>Account: {wallet.account}</div>
+              <div>Balance: {wallet.balance}</div>
+              <div>Type: {wallet.type}</div>
+              <div>Network: {wallet.networkName}</div>
+              <div>BlockNumber: {blockNumber}</div>
+            </div>
+            <button className="cnt-wlt-btn" onClick={() => wallet.reset()}>
+              disconnect
+            </button>
+          </div>
+        ) : (
+          <div>
+            <button className="cnt-wlt-btn" onClick={() => wallet.connect()}>
+              Connect to MetaMask
+            </button>
+          </div>
+        )}
+      </div>
+    </>
+  );
+};
+
+// Wrap everything in <UseWalletProvider />
+export default () => (
+  <UseWalletProvider>
+    <Connect />
+  </UseWalletProvider>
+);
