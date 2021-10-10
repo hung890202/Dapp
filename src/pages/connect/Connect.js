@@ -1,5 +1,5 @@
 import React from "react";
-import { useWallet, UseWalletProvider } from "use-wallet";
+import { useWallet } from "use-wallet";
 
 import "./Connect.css";
 
@@ -17,13 +17,13 @@ const Connect = () => {
           <div>
             <div className="connect-index-text">
               <div>Account: {wallet.account}</div>
-              <div>Balance: {wallet.balance}</div>
+              <div>Balance: {wallet.balance} WEI</div>
               <div>Type: {wallet.type}</div>
               <div>Network: {wallet.networkName}</div>
               <div>BlockNumber: {blockNumber}</div>
             </div>
             <button className="cnt-wlt-btn" onClick={() => wallet.reset()}>
-              disconnect
+              Disconnect
             </button>
           </div>
         ) : (
@@ -39,8 +39,4 @@ const Connect = () => {
 };
 
 // Wrap everything in <UseWalletProvider />
-export default () => (
-  <UseWalletProvider>
-    <Connect />
-  </UseWalletProvider>
-);
+export default Connect;

@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { UseWalletProvider } from "use-wallet";
 
 import Navbar from "./pages/navbar/Navbar";
 import Product from "./pages/product/Product";
@@ -8,15 +9,17 @@ import Connect from "./pages/connect/Connect";
 
 function Main() {
   return (
-    <Router>
-      <Navbar />
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/Product" exact component={Product} />
-        <Route path="/Market" exact component={Market} />
-        <Route path="/Connect" exact component={Connect} />
-      </Switch>
-    </Router>
+    <UseWalletProvider>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/Product" exact component={Product} />
+          <Route path="/Market" exact component={Market} />
+          <Route path="/Connect" exact component={Connect} />
+        </Switch>
+      </Router>
+    </UseWalletProvider>
   );
 }
 export default Main;

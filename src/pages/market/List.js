@@ -5,14 +5,14 @@ const List = ({ listData, deleteData }) => {
   return (
     <div className="list-index">
       {listData.map((item) => {
-        const { price, quantity, date, id } = item;
+        const { account, caption, image, id } = item;
         return (
           <Item
             key={id}
             itemId={id}
-            itemPrice={price}
-            itemQuantity={quantity}
-            itemDate={date}
+            itemAccount={account}
+            itemCaption={caption}
+            itemImage={image}
             deleteItemData={deleteData}
           />
         );

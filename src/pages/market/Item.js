@@ -2,9 +2,9 @@ import "./Item.css";
 
 const Item = ({
   itemId,
-  itemPrice,
-  itemQuantity,
-  itemDate,
+  itemAccount,
+  itemCaption,
+  itemImage,
   deleteItemData,
 }) => {
   function deleteItem() {
@@ -15,8 +15,14 @@ const Item = ({
 
   return (
     <div className="item-index">
-      <div className="item-item">
-        {itemPrice} x {itemQuantity} {`${itemDate}`}
+      <div className="item-index-item">
+        <div>
+          <div className="item-index-item">{itemAccount}</div>
+          <div className="item-index-item">{itemCaption}</div>
+          <div className="item-index-img-border">
+            <img className="item-index-img" src={itemImage} alt="" />
+          </div>
+        </div>
       </div>
       <button onClick={deleteItem} className="item-delete-btn">
         <i class="fas fa-times item-delete-icon"></i>
