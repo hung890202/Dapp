@@ -1,8 +1,7 @@
 .order-index {
   width: 450px;
-  height: 250px;
-  margin: 10px;
-  padding-top: 10px;
+  height: 450px;
+  padding-top: 20px;
   background-color: #1a1a1c;
   border: #f2f2f2;
   border-style: solid;
@@ -17,11 +16,13 @@
   border-style: solid;
   border-radius: 0.1rem;
 }
+
 .order-item-title {
   background: #1a1a1c;
   position: relative;
   top: -10px;
 }
+
 .order-item-input {
   font-family: monospace;
   padding: 5px;
@@ -31,6 +32,33 @@
   border-style: none;
   background-color: transparent;
 }
+.order-img-input {
+display: none;  
+position: relative;
+               
+}
+.folder {
+  height: 250px;
+  width: 250px;
+}
+.folder-icon {
+  padding-top: 40px;
+}
+.preview {
+
+ 
+}
+.preview-img {
+  height: 250px;
+  width: 250px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.preview-dlt-icon {
+  padding-left: 20px;
+}
+
 .order-btn {
   padding: 10px;
   color: #f2f2f2;

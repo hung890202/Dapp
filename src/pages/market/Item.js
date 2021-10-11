@@ -1,3 +1,5 @@
+
+
 import "./Item.css";
 
 const Item = ({
@@ -13,14 +15,16 @@ const Item = ({
     });
   }
 
+
+
   return (
     <div className="item-index">
       <div className="item-index-item">
         <div>
           <div className="item-index-item">{itemAccount}</div>
           <div className="item-index-item">{itemCaption}</div>
-          <div className="item-index-img-border">
-            <img className="item-index-img" src={itemImage} alt="" />
+          <div className="item-index-img-border" >
+            <img className="item-index-img" src={itemImage} alt="upload-img" />
           </div>
         </div>
       </div>
