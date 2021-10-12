@@ -14,6 +14,7 @@ const Connect = () => {
           <span className="connect-index-title">Connect Wallet</span>
         </h1>
         {wallet.status === "connected" ? (
+          <>
           <div>
             <div className="connect-index-text">
               <div>Account: {wallet.account}</div>
@@ -22,10 +23,11 @@ const Connect = () => {
               <div>Network: {wallet.networkName}</div>
               <div>BlockNumber: {blockNumber}</div>
             </div>
+            </div>
             <button className="cnt-wlt-btn" onClick={() => wallet.reset()}>
               Disconnect
             </button>
-          </div>
+          </>
         ) : (
           <div>
             <button className="cnt-wlt-btn" onClick={() => wallet.connect()}>
@@ -38,5 +40,4 @@ const Connect = () => {
   );
 };
 
-// Wrap everything in <UseWalletProvider />
 export default Connect;

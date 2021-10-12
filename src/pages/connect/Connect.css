@@ -1,9 +1,6 @@
 .connect-index {
-  width: 450px;
-  
-  margin: 10px;
-  margin-top: 50px;
-  padding: 10px;
+  margin: 20px;
+  align-items: center;
   color: #f2f2f2;
   border: #f2f2f2;
   border-style: solid;
@@ -11,10 +8,14 @@
   text-align: center;
 }
 .connect-index-title {
-  
   background: #1a1a1c;
   position: relative;
-  top: -45px;
+  top: -35px;
+}
+.connect-index-text-border{
+  padding: 10px;
+  border-style: solid;
+  border-radius: 0.1rem;
 }
 .connect-index-text {
   text-align: start;
@@ -26,6 +27,8 @@
   border-radius: 0.1rem;
 }
 .cnt-wlt-btn {
+  margin: 5px;
+  padding: 10px;
   color: #f2f2f2;
   font-size: 15px;
   font-family: monospace;
